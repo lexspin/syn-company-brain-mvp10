@@ -7,7 +7,7 @@
     "control-room.test.js",
     "map-live.test.js"
   ],
-  "local_navigation_targets_checked": 148,
+  "local_navigation_targets_checked": 150,
   "privacy_scan": "No configured credential, owner-path or private-email patterns matched in text, PDF text or DOCX XML. Not a guarantee; image contents and all possible secret forms are not covered.",
   "pdf_pages": [
     19,
@@ -15,6 +15,7 @@
     59,
     7
   ],
-  "browser": "Homepage and interactive control-room Save step checked with actual browser; illustrative outputs visible.",
-  "scope": "Historical 495-test suite was not rerun in this public export."
+  "browser": "Published GitHub Pages homepage verified without sign-in. Local example Save step and 3D Visible arbiter selection checked in the browser; sources and outputs displayed.",
+  "scope": "Historical 495-test suite was not rerun in this public export.",
+  "github_ci": "Public edition checks and Pages build passed for the initial public commit."
 }

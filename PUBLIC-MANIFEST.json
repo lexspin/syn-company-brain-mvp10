@@ -828,7 +828,7 @@
     },
     {
       "path": "presentation/release-notes.html",
-      "sha256": "6b4ebe65306cbf29e1dfb29729167211295f0f06ab12333695ae61d53bb4da7d"
+      "sha256": "bd2913d5ad7bb8317fa0807e3a07e7cd4fddbc059986349d45b1fe99379229ee"
     },
     {
       "path": "presentation/RELEASE-NOTES.md",
@@ -840,7 +840,7 @@
     },
     {
       "path": "PUBLIC-CHECKS.json",
-      "sha256": "39ea0501c8e10b45991a9fb4e6a54768ee3d86b2c12eb2d1940ceb814fcfc7be"
+      "sha256": "5b761b2c0b14f4eb3c36e8c2c2b938b5a1b01e9262e79c147aebe6ce3bb357e0"
     },
     {
       "path": "README.md",

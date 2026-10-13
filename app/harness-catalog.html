@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Harness catalogue · Company Brain MVP07</title>
+<style>
+:root{color-scheme:dark;font:15px/1.55 system-ui,sans-serif;background:#0c1115;color:#dbe7e8}body{margin:0}main{max-width:1240px;margin:auto;padding:24px 30px}a{color:#add6ba}nav{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:26px}h1{font-size:28px;margin:0}h2{font-size:21px;margin:28px 0 12px}h3{font-size:17px;margin:0 0 8px}p{color:#a8babc;margin:8px 0}form{display:flex;gap:14px;flex-wrap:wrap;align-items:end;margin:18px 0}label{display:block;flex:1;min-width:180px}label span{display:block;font-size:13px;margin-bottom:5px}input,select,button{box-sizing:border-box;font:inherit;padding:10px 12px;border:1px solid #364b52;border-radius:6px;background:#142027;color:#e0eded}input,select{width:100%}button{cursor:pointer;background:#add6ba;color:#10251b}button:disabled{opacity:.6;cursor:wait}button.secondary{background:#142027;color:#e0eded}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:14px}.card,.local{border:1px solid #293e46;background:#101b21;padding:18px;border-radius:9px}.local ul{padding-left:20px}.local li{margin:7px 0}.tag{display:inline-block;padding:3px 8px;border-radius:12px;background:#21362e;color:#b5d9c3;font-size:12px}small,.muted{color:#8ea4a8}ul{padding-left:20px;color:#a8babc}.card a,.card p{overflow-wrap:anywhere}.status{min-height:28px}.error{color:#f3b29e}details{margin-top:12px}summary{cursor:pointer;color:#abc0c2}code{overflow-wrap:anywhere;font-size:12px}#requirements{margin:10px 0}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid #add6ba;outline-offset:3px}@media(max-width:650px){main{padding:18px}form button{flex:1}}
+</style>
+<script defer src="/harness-catalog.js"></script>
+</head>
+<body><main>
+<nav aria-label="Company Brain"><a href="/">Full workspace</a>Executive overview<a href="/?area=maps&amp;live=1">Live Neurolinks</a></nav>
+<h1>Harness catalogue</h1>
+<p>Find upstream procedures and review what they need before adapting them to Company Brain.</p>
+<section class="local" aria-labelledby="local-heading">
+<h2 id="local-heading" style="margin-top:0">Local adaptations</h2>
+<p>These Company Brain paths keep the existing host, ownership and acceptance checks.</p>
+<ul>
+<li>How the adapted harness works — scoped work, prerequisites and checked outcomes.</li>
+<li>Review learning candidates — find proposed procedures with their evidence and source versions.</li>
+<li>Review skill overlap and dependencies — preserve useful methods and their consumers.</li>
+<li>Check a procedure before reuse — normal and failure cases, retained predecessors and reviewed changes.</li>
+<li>Follow reported execution — actual task events, source reads and results.</li>
+</ul></section>
+<section aria-labelledby="upstream-heading">
+<h2 id="upstream-heading">Pinned upstream resources</h2>
+<p>Catalogue entries are source references. They have not been installed, executed or evaluated as Company Brain procedures. Requirements are discovery hints; availability, supporting files and applicable rights need review.</p>
+<form id="catalog-search" role="search">
+<label for="catalog-query"><span>Find a procedure</span><input id="catalog-query" type="search" maxlength="1000" placeholder="For example: research, memory or testing"></label>
+<label for="catalog-category"><span>Category</span><select id="catalog-category"><option value="">All categories</option></select></label>
+<button id="catalog-submit" type="submit">Search</button><button id="catalog-clear" type="button" class="secondary">Clear filters</button>
+</form>
+<p id="catalog-status" class="status" role="status" aria-live="polite">Loading the source catalogue…</p>
+<p id="catalog-pin" class="muted"></p>
+<div id="catalog-results" class="cards" aria-label="Upstream skill references"></div>
+<p>Catalogue coverage and review requirements</p>
+</section>
+</main></body></html>

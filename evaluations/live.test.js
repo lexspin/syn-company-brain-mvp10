@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict');
+const {row,visible,safeUrl}=require('../app/live.js');
+const t={id:'a',label:'<script>private</script>',status:'active',nodes:[{id:'one',label:'Area one',kind:'skill'},{id:'two',label:'Area two',kind:'memory'}],edges:[{source:'one',target:'two',label:'read',animate:true}]};
+assert(!row(t).includes('<script>'));
+assert(!row(t).includes('animateMotion'));
+assert(row({...t,flash:true}).includes('repeatCount="1"'));
+assert(!row({...t,edges:[{source:'missing',target:'two'}],flash:true}).includes('animateMotion'));
+assert.equal(visible(Array.from({length:20},(_,i)=>({...t,id:String(i)})),'','all').length,20);
+assert.equal(visible([t],'Area one','active').length,1);
+assert.equal(visible([t],'','failed').length,0);
+assert.equal(safeUrl('javascript:alert(1)'),null);
+assert.equal(safeUrl('//evil.com'),null);
+assert.equal(safeUrl('/?area=maps'), '/?area=maps');
+console.log('Live view: escaping, event-only motion, exact edge endpoints, 20 tasks, filters and links passed.');

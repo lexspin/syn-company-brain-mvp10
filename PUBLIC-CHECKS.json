@@ -1,0 +1,20 @@
+{
+  "edition": "MVP10 public",
+  "date": "2026-10-13",
+  "portable_example": "passed: synthetic project and memory persisted/read in isolated temporary directory",
+  "python_tests": 10,
+  "node_scripts_passed": [
+    "control-room.test.js",
+    "map-live.test.js"
+  ],
+  "local_navigation_targets_checked": 148,
+  "privacy_scan": "No configured credential, owner-path or private-email patterns matched in text, PDF text or DOCX XML. Not a guarantee; image contents and all possible secret forms are not covered.",
+  "pdf_pages": [
+    19,
+    6,
+    59,
+    7
+  ],
+  "browser": "Homepage and interactive control-room Save step checked with actual browser; illustrative outputs visible.",
+  "scope": "Historical 495-test suite was not rerun in this public export."
+}

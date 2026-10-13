@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict');
+const {project}=require('../app/executive-widgets.js');
+const r=(kind,id,data,extra={})=>({kind,id,data,version:2,...extra});
+const loop=r('loop','flow',{name:'Flow'}),result=r('memory','result',{name:'Actual result',refs:['loop:flow']});
+const request=(id,state,extra={})=>r('memory',id,{name:id,type:'native-work-request',request_state:state,loop_id:'flow',loop_version:2,...extra});
+const complete={result_ref:'result',claimant:'worker',claimed_at:'2026-10-11',completed_at:'2026-10-11',completion_evidence:'checked'};
+const data=project({objects:[loop,result,request('waiting','queued'),request('working','running'),request('old','completed',{...complete,loop_version:1}),request('done','completed',complete),request('failed','failed'),request('broken','completed'),{...request('archived','queued'),archived:true}]});
+assert.equal(data.work.length,2);assert.equal(data.results.length,2);assert.equal(data.attention.length,2);assert.equal(data.knowledge.length,1);
+assert.equal(data.results.filter(r=>r.legacy).length,1);assert.equal(data.work[0].href,'/#memory/waiting');assert.equal(data.results[0].href,'/#memory/result');assert.equal(data.results[0].requestHref,'/#memory/old');
+assert.equal(project({objects:[loop,{...result,archived:true},request('done','completed',complete)]}).results.length,0);
+assert.equal(project({objects:[loop,result,request('done','completed',{...complete,claimant:''})]}).results.length,0);
+assert.equal(project({objects:[loop,result,request('blocked','blocked')]}).attention.length,1);
+assert.equal(project({objects:[]}).work.length,0);
+console.log('Executive projection checks passed: archived filters, counts, evidence, legacy and stable destinations.');

@@ -1,0 +1,7 @@
+# Offline routing benchmark
+
+Run `python evaluations/routing_benchmark.py --state PATH_TO_STATE_JSON --helper PATH_TO_LOCAL_ROUTE_PY --output REPORT_JSON` from an OS checkout. Defaults read the canonical published state and installed local helper. No network, model call, record save or promotion is performed. The helper path must be a trusted local implementation: loading Python executes that selected module.
+
+The twenty nonprivate cases deliberately fix expected skill IDs independently of returned cards. The report records missing expected procedures, unavailable expectations, stale/archived or version-mismatched cards, result bounds, unexpected skill suggestions for negative queries, snapshot/helper/fixture hashes and per-query elapsed time. Exit 1 means at least one measured failure; preserve that report and investigate rather than weakening expectations. A changed source catalogue can legitimately invalidate an expectation and must be reviewed explicitly. Timing excludes state loading and is not a production SLA. Generic irrelevant memory hits are outside the no-forced-skills negative criterion.
+
+Tests validate missing expected IDs even when adjacent, stale memory/old versions/archived records, negative/bound violations and duplicate cases. Passing this selected set does not prove semantic routing, tool availability or production benefit. Useful results belong in the existing candidate review/archive workflow; no timer or promotion is added.

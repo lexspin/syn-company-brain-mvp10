@@ -1,0 +1,20 @@
+name: Public edition checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  public-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python scripts/check_public.py
+      - run: python examples/portable_brain.py
+      - run: python -m unittest discover -s evaluations -p test_control_room.py -v
+      - run: python -m unittest discover -s evaluations -p test_loop_audit.py -v
+      - run: node evaluations/control-room.test.js

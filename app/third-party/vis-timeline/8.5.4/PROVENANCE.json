@@ -1,0 +1,40 @@
+{
+  "name": "vis-timeline",
+  "version": "8.5.4",
+  "license": "Apache-2.0 OR MIT",
+  "source": "https://github.com/visjs/vis-timeline",
+  "tarball": "https://registry.npmjs.org/vis-timeline/-/vis-timeline-8.5.4.tgz",
+  "integrity": "sha512-Xt7RNrRvOkQiSyk6vFTXSRwTunT0y9MzDgHY8N8H9nPuebJ6Vg+u3xnv0Swbxna/Pa2E3HjaBblEIQiK74E01Q==",
+  "files": [
+    {
+      "path": "vis-timeline-graph2d.min.css",
+      "upstream_path": "package/styles/vis-timeline-graph2d.min.css",
+      "bytes": 19837,
+      "sha256": "67273f3f1bfc5fee585494e8b8818d7cad98c229737488bc56f140547badc1f5"
+    },
+    {
+      "path": "vis-timeline-graph2d.min.js",
+      "upstream_path": "package/standalone/umd/vis-timeline-graph2d.min.js",
+      "bytes": 548806,
+      "sha256": "22045807e537d38d01a537e97563ad8b0269f8b827bb5da23e060f9c3f8ec13b"
+    },
+    {
+      "path": "LICENSE.md",
+      "upstream_path": "package/LICENSE.md",
+      "bytes": 315,
+      "sha256": "535036cac87eaf62b4460a592c2d12e349d6b1135f0203e77eab1b23ad08bc55"
+    },
+    {
+      "path": "LICENSE.Apache-2.0.txt",
+      "upstream_path": "package/LICENSE.Apache-2.0.txt",
+      "bytes": 10171,
+      "sha256": "1509904280a272780fd69c04b858f512cf216f8e3464a0dd98d8f34416feced9"
+    },
+    {
+      "path": "LICENSE.MIT.txt",
+      "upstream_path": "package/LICENSE.MIT.txt",
+      "bytes": 1145,
+      "sha256": "507e7e91e0a385c9de0464889068fada0620e327d23f1d64605a7d046490ec97"
+    }
+  ]
+}

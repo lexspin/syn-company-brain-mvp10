@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "purpose": "Independent nonprivate expected procedure inclusion; misses are results, not reasons to weaken fixtures. No provider/model calls.",
+  "cases": [
+    {
+      "id": "exact-naming",
+      "query": "skill:company-brain-naming",
+      "expected_refs": [
+        "skill:company-brain-naming"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "exact-harness",
+      "query": "company-brain-harness",
+      "expected_refs": [
+        "skill:company-brain-harness"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "exact-archive",
+      "query": "@company-brain-archive-research",
+      "expected_refs": [
+        "skill:company-brain-archive-research"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "exact-review",
+      "query": "skill:company-brain-prompt-review",
+      "expected_refs": [
+        "skill:company-brain-prompt-review"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "rename",
+      "query": "Rename these record labels while preserving stable identities",
+      "expected_refs": [
+        "skill:company-brain-naming"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "archive",
+      "query": "Archive this research and preserve its source connections",
+      "expected_refs": [
+        "skill:company-brain-archive-research"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "renaming",
+      "query": "Renaming records needs a reviewed naming plan",
+      "expected_refs": [
+        "skill:company-brain-naming"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "archiving",
+      "query": "Archiving requested research with provenance",
+      "expected_refs": [
+        "skill:company-brain-archive-research"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "debug",
+      "query": "Debug the system bug and run regression checks",
+      "expected_refs": [
+        "skill:company-brain-system-review"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "github",
+      "query": "Commit and push the GitHub repository release",
+      "expected_refs": [
+        "skill:company-brain-harness"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "video",
+      "query": "Research this video and compare findings with current work",
+      "expected_refs": [
+        "skill:company-brain-research-intake"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "paper",
+      "query": "Develop living papers and annexes from checked project evidence",
+      "expected_refs": [
+        "skill:company-brain-living-papers"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "ui",
+      "query": "Audit whether every screen is useful and actually works",
+      "expected_refs": [
+        "skill:company-brain-interface-audit"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "prompt",
+      "query": "Improve prompts using source evidence and regression checks",
+      "expected_refs": [
+        "skill:company-brain-prompt-review"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "lessons",
+      "query": "Preserve failure causes and fixes so mistakes do not recur",
+      "expected_refs": [
+        "skill:company-brain-work-lessons"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "dispatch",
+      "query": "Claim queued native workflows and preserve checked results",
+      "expected_refs": [
+        "skill:company-brain-native-dispatch"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "ambiguous-names",
+      "query": "These labels are confusing; give them clearer names",
+      "expected_refs": [
+        "skill:company-brain-naming"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "ambiguous-study",
+      "query": "Read this article and retain useful findings",
+      "expected_refs": [
+        "skill:company-brain-research-intake"
+      ],
+      "expect_no_skills": false
+    },
+    {
+      "id": "negative-math",
+      "query": "What is seventeen multiplied by nineteen?",
+      "expected_refs": [],
+      "expect_no_skills": true
+    },
+    {
+      "id": "negative-food",
+      "query": "How long should spaghetti boil in salted water?",
+      "expected_refs": [],
+      "expect_no_skills": true
+    }
+  ]
+}

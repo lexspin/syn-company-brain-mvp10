@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+runtime/
+store/
+records/
+vendor/
+.env
+.env.*
+!.env.example
+*.sqlite*
+*.log
+.venv/
